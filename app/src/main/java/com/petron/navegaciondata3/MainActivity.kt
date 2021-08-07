@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.petron.navegaciondata3.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -14,6 +15,8 @@ class MainActivity : AppCompatActivity() {
 
         // controlador de navegación para agregar un botón atras Arriba a su aplicación
         val navController = this.findNavController(R.id.myNavHostFragment)
+
+        NavigationUI.setupActionBarWithNavController(this,navController)
     }
 
 
